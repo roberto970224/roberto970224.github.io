@@ -1,0 +1,630 @@
+*{
+    font-family: 'Open Sans', sans-serif;
+}
+
+:root{
+    /* VARIABLES CREADAS LLAMADAS CUSTOM PROPERTIES
+       PARA QUE TODOS LOS ELEMENTOS PUEDAN USARLAS */
+    --padding-container:100px 0;
+    --color-title: #012d7e;
+}
+
+.container{
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;/*todo lo q salga de este container se esconda*/
+    padding: var(--padding-container);
+}
+
+.hero{
+   width: 100%;
+   height: 100%;
+   position: relative;/*para q un elemento se posicione a este contenedor*/
+   display: grid; /*xq quiero crear 2 filas*/
+   grid-template-rows: 100px 1fr;/*1fr es q la 2da fila tome el contenido sobrante*/
+   background-image: url(../images/calvin-dahne-WX9bvBTUzB4-unsplash.jpg);
+   background-size: cover;
+   clip-path: polygon(100% 0, 100% 80%, 50% 95%, 0 80%, 0 0);
+    color: #fff;
+}
+
+.nav{
+    --padding-container:0;
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+
+.nav_title{
+    font-weight: 300;
+}
+/* ul padre */
+.nav_link{
+    margin-left: auto;
+    padding: 0;
+    display: grid;/*una grid dentro de otra grid*/
+    grid-auto-flow: column;/*su flujo sera en columnas, osea una al lado de la otra*/
+    grid-auto-columns: max-content;/*cada columna tenga su max contenido*/
+    gap: 2em;/*tenga un espaciado de 2em*/
+}
+/* li hijo de ul */
+.nav_items{
+    list-style: none; /*quito las listas(osea los puntos)*/
+}
+/* a hijo de li y nieto de ul*/
+.nav_links{
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav_menu{
+    margin-left: auto;
+    cursor: pointer;
+    display: none; /*desaparece hasta q trabaje con dispo.moviles*/
+}
+
+.nav_img{
+    display: block;
+    width: 30px;
+}
+/* nav_close  es trabajado en responsive design */
+.nav_close{
+    display: var(--show,none);
+}
+
+
+/* Hero container */
+
+.hero_container{
+    --padding-container:0;
+    display: grid;
+    grid-auto-rows: max-content;
+    gap: 1em;
+    align-content: center;
+    padding-bottom: 100px;
+    text-align: center;
+}
+.hero_title{
+    font-size: 3rem;
+}
+.hero_paragraph{
+    margin-bottom: 20px;
+}
+.cta{
+    display: inline-block; /*??*/
+    background-color: #457fec;
+    justify-self: center;
+    color: #fff;
+    text-decoration: none;
+    padding: 13px 30px;
+    border-radius: 30px;
+
+}
+
+/* Acerca de */
+.about{
+    text-align: center;
+}
+/* esto es una forma de poner cada about_icons uno al lado de otro
+   con tan solo display flex */
+/* .about_main{
+    display: flex;
+    padding: 20px 20px;
+    align-items: center;
+    
+    justify-content: space-between;
+} */
+/* pero lo haremos con las filas y columnas (grid) */
+
+.about_main{
+    padding-top: 20px;
+    overflow: hidden;
+    display: grid;
+    width: 90%;
+    margin: 0 auto;
+    gap: 1em;
+    /* ahora tenemos 3 filas, se cambiaria a 3 columnas */
+    /* con el auto-fit decimos q repita columnas como sea posible 
+       con un minimo de 260px por columna y un max automatico*/
+    grid-template-columns: repeat(auto-fit,minmax(260px,auto));   
+}
+.subtitle{
+    color: var(--color-title);
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.about_icons{
+    display: grid;
+    gap: 1em;/*separacion entre filas*/
+    justify-items: center;
+    width: 260px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+/* imagen */
+.about_icon{
+    width: 40px;
+}
+.about_title{
+    margin-bottom: 10px;
+}
+.about_paragraph{
+    line-height: 1.5; /*separacion entre lineas*/
+}
+
+
+      /* knowledge */
+.knowledge{
+    background-color: #e5e5f7;
+
+background-image:  radial-gradient(#444cf7 0.45px, transparent 0.45px), radial-gradient(#444cf7 0.45px, #e5e5f7 0.45px);
+background-size: 18px 18px;
+background-position: 0 0,9px 9px;
+overflow: hidden;
+}
+.knowledge_container{
+    display: grid;
+    /* ahora crea 2 columnas con el mismo tamaño equitativamente */
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+    align-items: center;
+}
+.knowledge_texts{
+    align-self: baseline;
+}
+.knowledge_picture{
+   max-width: 500px;
+}
+.knowledge_paragraph{
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+.knowledge_img{
+    
+    display: block; /*para evitar problemas con espacios verticales*/
+    width: 100%;
+    height: 500px;
+ 
+}
+
+/* Precio */
+
+.price{
+    text-align: center;
+}
+/* puedo poner las cajas en columnas con grid pero 
+   esta section la hare con flex */
+/* .price_table{
+    display: grid;
+    gap: 1em;
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 60px;
+    grid-template-columns: repeat(auto-fit,minmax(260px,auto));
+} */
+.price_table{
+    padding-top: 60px;
+    display: flex;
+   flex-wrap: wrap;
+   gap: 2.5em;
+   justify-content: space-evenly;
+   align-items: center;
+}
+
+.price_element{
+    line-height: 1.7;
+    background-color: #77a4f6f1;
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    width: 300px;
+}
+.price_element--best{
+    background-color: #e64d23f5;
+    width: 370px;
+    padding: 50px 40px;
+}
+.price_name{
+    color: #fbfcffea;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+.price_price{
+    font-size: 2.5rem;
+    color: #80350a;
+}
+.price_items{
+    margin-top: 20px;
+    display: grid;
+    gap: 1em;
+    font-weight: 300;
+    font-size: 1.2rem;
+    margin-bottom: 50px;
+    color: #fff;
+}
+.price_cta{
+    background-color: #c6f609;
+    padding: 5px 30px;
+    text-decoration: none;
+    border-radius: 30px;
+   
+    font-weight: 600;
+    display: block;
+    box-shadow: 0 0 9px rgba(0, 0, 0,.5);
+    
+}
+
+/* Testimonios */
+
+.testimony{
+    background-color: #e5e5f7;
+
+background-image: radial-gradient(#444cf7 0.8500000000000001px, #e5e5f7 0.8500000000000001px);
+background-size: 17px 17px;
+overflow: hidden;
+}
+
+.testimony_container{
+    display: grid;
+    grid-template-columns: 50px 1fr 50px;
+    gap: 1em;
+    align-items: center; /*contenido vertical (flecha en el centro verticalmente)*/
+}
+
+.testimony_body{
+    display: grid;
+    grid-template-columns: 1fr max-content;
+    justify-content: space-between;
+    align-items: center;/*contenido vertical (el texto en el centro verticalmente)*/
+    gap: 2em;
+    /* ponmelo en la columna 2 a la 3 */
+    grid-column: 2/3;
+    /* ponmelo en la fila 1 a la 2 */
+    grid-row: 1/2;
+    /* no pueda seleccionarlo */
+    pointer-events: none; /*para q no pueda seleccionarlos*/
+    opacity: 0;
+}
+.testimony_body--show{
+    pointer-events: unset; /*para q vaya a la propiedad original*/
+    opacity: 1;
+    transition: opacity 1s ease-in-out; 
+}
+
+.testimony_img{
+    width: 250px;
+    height: 290px;
+    border-radius: 50%;
+    object-fit: cover;
+    /* ahora centramos la imagen con 50% eje x y 30% eje y */
+    object-position: 50% 70%;
+}
+.img_claudia{
+    object-position: 26% 28%;
+    object-fit: none;
+}
+
+.testimony_texts{
+    text-align: center;
+    max-width: 700px;
+}
+/* span */
+.testimony_course{
+    background-color: #234be8d9;
+    color: #fff;
+    display: inline-block;
+    padding: 5px;
+}
+/* flecha izquiera y derecha */
+.testimony_arrow{
+    width: 90%;
+    cursor: pointer;
+}
+
+
+
+           /* Questions */
+
+.questions{
+    text-align: center;
+}
+
+.questions_container{
+    display: grid;
+    gap: 2em;
+    padding-top: 50px;
+    padding-bottom: 100px;
+}
+.questions_padding{
+    padding: 0;
+    transition: padding .2s;
+    border: 1px solid #5454D4;
+    
+    border-radius: 6px;
+}
+
+/* ahora agregar el modificador 
+   que sera trabajada en js */
+
+.questions_padding--add{
+    padding-bottom: 30px;
+}
+
+.questions_answer{
+    padding: 0 30px 0;
+    /* gracias al overflow: hidden esto se efectua:
+    .questions_show{
+    height: 0;
+             y asi se oculta todo el parrafo
+} */
+    overflow: hidden;
+   
+    
+}
+.questions_title{
+    display: flex;
+    padding: 30px 0 30px;
+    cursor: pointer;
+    font-size: 20px;
+    color: #0a388e;
+    /* ahora con el space-between tira a el titulo y la flecha
+       a cada esquina */
+    justify-content: space-between;
+}
+.questions_arrow{
+    border-radius: 50%;
+    background-color: #030523;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    margin-left: 10px;
+   transition: transform .3s;
+}
+/* ahora crear clase modificadora a arrow */
+
+.questions_arrow--rotate{
+    transform: rotate(180deg);
+}
+
+.questions_show{
+    text-align: left;
+    height: 0;
+    transition: height .5s;
+}
+
+/* Acceder */
+
+
+.questions_copy{
+    
+    width: 60%;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+
+
+/* footer */
+
+.footer{
+    background-image: linear-gradient(135deg, #203ab1 0%, #764ba2 100%);
+}
+.footer_container{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 4px solid #fff;
+    align-items: center;
+    
+
+}
+.nav--footer{
+    display: grid;
+    gap: 1em;
+}
+
+.footer_title{
+    color: #fff;
+    font-weight: 300;
+    font-size: 2rem;
+    grid-auto-flow: row;
+    height: 100%;
+}
+
+.nav_link--footer{
+    padding-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+}
+/* footer_form */
+
+.footer_form{
+
+}
+.footer_newsletter{
+    color: #fff;
+}
+.footer_inputs{
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+.footer_input{
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 6px rgba(0, 0, 0,.5);
+    margin-right: 10px;
+}
+.footer_submit{
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 6px rgba(0, 0, 0,.5);
+    background-color: #457fec;
+    color: #fff;
+    cursor: pointer;
+}
+
+.footer_copy{
+    color: #fff;
+    text-align: center;
+    --padding-container:30px 0;
+}
+.footer_social{
+   
+   
+}
+.footer_icons{
+    display: inline-flex;
+    margin-bottom: 10px;
+}
+.footer_img{
+    width: 30px;
+}
+
+.footer_copyright{
+    font-weight: 300;
+}
+
+/* ------------------------------------ */
+
+/* RESPONSIVE DESIGN */
+
+@media screen and (max-width:800px){
+    .nav_menu{
+        display: block;
+    }
+    .nav_link--menu{
+        position: fixed;
+        background-color: #000;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;/*reparte el espacio verticalmente*/
+        align-items: center; /*lo centre horizontalmente*/
+        z-index: 100;
+        opacity: 0;
+        pointer-events: none;
+        transition: .7s opacity;
+    }
+
+    /* crear clase modificadora para cuando el elemento close (x)
+       tenga esta clase la muestre */
+    .nav_link--show{ 
+        --show: block;
+        opacity:1;
+        pointer-events: unset;
+    }
+    .nav_close{
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        width: 30px;
+        cursor: pointer;
+    }
+    .hero_title{
+        font-size: 2.5rem;
+    }
+    .about_main{
+        gap: 2em;
+    }
+    /* el ultimo de los iconos tomara de la columna 1 a la ultima columna */
+    .about_icons:last-of-type{
+        grid-column: 1/-1;
+    }
+    .knowledge_container{
+        grid-template-columns: 1fr;
+        grid-template-rows: max-content 1fr;
+        gap: 3em;
+        text-align: center;
+        
+    }
+    .knowledge_picture{
+        grid-row: 1/2;
+        height: 100%;
+        width: 100%;
+        justify-self: center;
+    }
+
+    .testimony_container{
+        grid-template-columns: 30px 1fr 30px;
+    }
+    .testimony_body{
+        grid-template-columns: 1fr;
+        grid-template-rows: max-content max-content;
+        gap: 3em;
+        justify-items: center;
+    }
+
+    .footer_container{
+        flex-wrap: wrap;
+    }
+    .nav--footer{
+        margin-bottom: 20px;
+        width: 100%;
+        
+        text-align: center;
+    }
+    .nav_link--footer{
+        width: 100%;
+        justify-content: space-evenly;
+    }
+    .footer_form{
+        width: 100%;
+        
+    }
+    .footer_inputs{
+        justify-content: space-between;
+        
+    }
+
+    .footer_input{
+        flex: 1;
+        
+        
+    }
+
+}
+
+@media (max-width:600px){
+    .hero_title{
+        font-size: 2rem;
+    }
+    .hero_paragraph{
+        font-size: 1rem;
+    }
+    .subtitle{
+        font-size: 1.8rem;
+    }
+    .price_element{
+        width: 90%;
+    }
+    .price_element--best{
+        width: 90%;
+        /* padding: 40px; */
+    }
+
+    .price_price{
+        font-size: 2rem;
+    }
+    .testimony_container{
+        grid-template-columns: 28px 1fr 28px;
+        
+    }
+    .footer_title{
+        justify-self: start;
+    }
+    .footer_inputs{
+        flex-wrap: wrap;
+    }
+    .footer_submit{
+        margin: auto;
+        margin-top: 20px;
+    }
+}
