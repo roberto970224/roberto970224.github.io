@@ -817,3 +817,100 @@ overflow: hidden;
         margin-top: 20px;
     }
 }
+
+@media screen and (max-width:380px){
+    .hero_title{
+        font-size: 2rem;
+    }
+    .hero_paragraph{
+        font-size: 1rem;
+    }
+    .about_paragraph{
+        margin: auto 30px;
+        text-align: center;
+    }
+
+    .about_icons .about_paragraph{
+        margin: auto 0;
+    }
+
+    .knowledge_texts .knowledge_paragraph{
+        margin-bottom: 0px;
+        margin-top: 10px;
+        text-align: center;
+    }
+    .subtitle{
+        font-size: 1.8rem;
+    }
+    #About .subtitle{
+        margin: auto 20px;
+        margin-bottom: 20px;
+    }
+    .price_element{
+        width: 70%;
+        height: 350px;
+        line-height: 0.7;
+    }
+    .price_element--best{
+        width: 70%;
+        /* padding: 40px; */
+    }
+    .price_features{
+        line-height: 1.8;
+        align-items: center;
+    }
+
+    .price_table{
+        justify-content: space-evenly;
+    }
+    .price_element .price_cta{
+      padding-bottom: 0;
+      margin-bottom: 30px;
+    }
+
+    .price_price{
+        font-size: 2rem;
+    }
+    .testimony_container{
+        grid-template-columns: 1fr 280px 1fr;
+        gap: 1em;
+    }
+    .testimony_arrow{
+        
+       align-self: self-end;
+        
+    }
+    #before{
+
+    }
+    #next{
+        justify-self: end;
+    }
+    .questions_padding{
+        margin: auto 50px;
+    }
+
+    .questions_answer{
+        padding: 0;
+
+    }
+    /* footer */
+
+    .nav--footer .nav_link{
+        flex-flow: row;
+    }
+    .nav_link--footer .nav_items{
+        font-size: 16px;
+    }
+
+    .footer_title{
+        justify-self: start;
+    }
+    .footer_inputs{
+        flex-wrap: wrap;
+    }
+    .footer_submit{
+        margin: auto;
+        margin-top: 20px;
+    }
+}
