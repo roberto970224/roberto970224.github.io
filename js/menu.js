@@ -15,6 +15,27 @@ closeMenu.addEventListener('click',()=>{
    
 
 
+// document.querySelectorAll(".nav_links").forEach(element => {
+//     element.addEventListener("click", function (e) {
+//         e.preventDefault();
+
+//         const targetId = this.getAttribute("href").substring(1);
+//         const targetElement = document.getElementById(targetId);
+
+//         if (targetElement) {
+
+//             const offset = targetElement.getBoundingClientRect().top + window.scrollY;
+//             window.scrollTo({
+//                 top: offset,
+//                 behavior: 'smooth'
+//             });
+//             // window.scrollTo({
+//             //     top: targetElement.offsetTop,
+//             //     behavior: 'smooth'
+//             // });
+//         }
+//     });
+// });
 
 
 

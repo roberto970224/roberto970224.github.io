@@ -1,5 +1,9 @@
 *{
     font-family: 'Open Sans', sans-serif;
+    /* desplazarse suave */
+    scroll-behavior: smooth;
+    /* con user-select el usuario no puede seleccionar nada */
+    user-select: none;
 }
 
 :root{
@@ -10,8 +14,8 @@
 }
 
 .container{
-    width: 90%;
-    max-width: 1200px;
+    width: 100%;
+   
     margin: 0 auto;
     overflow: hidden;/*todo lo q salga de este container se esconda*/
     padding: var(--padding-container);
@@ -23,31 +27,50 @@
    position: relative;/*para q un elemento se posicione a este contenedor*/
    display: grid; /*xq quiero crear 2 filas*/
    grid-template-rows: 100px 1fr;/*1fr es q la 2da fila tome el contenido sobrante*/
-   background-image: url(../images/calvin-dahne-WX9bvBTUzB4-unsplash.jpg);
-   background-size: cover;
+   background-image: url(../images/html\,css\ y\ js.jpg);
+   
+   background-size:cover ;
+  
    clip-path: polygon(100% 0, 100% 80%, 50% 95%, 0 80%, 0 0);
-    color: #fff;
+    color: #000000;
+    
+    width: auto;
+    background-attachment:fixed;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .nav{
     --padding-container:0;
     display: flex;
+    justify-content: space-between;
     height: 100%;
     align-items: center;
 }
 
 .nav_title{
     font-weight: 300;
+    font-size: 15px;
+    margin-left: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 /* ul padre */
 .nav_link{
-    margin-left: auto;
-    padding: 0;
+    margin-top: 0;
+    padding-top: 10px;
+    margin-right: 20px;
     display: grid;/*una grid dentro de otra grid*/
     grid-auto-flow: column;/*su flujo sera en columnas, osea una al lado de la otra*/
     grid-auto-columns: max-content;/*cada columna tenga su max contenido*/
     gap: 2em;/*tenga un espaciado de 2em*/
+    transition: transform 0.3s;
+    align-self: flex-start;
 }
+
+.spread{
+    transform: translate(0); /*cuando demos click a un boton quiero q aparezca otra vez*/
+}
+
 /* li hijo de ul */
 .nav_items{
     list-style: none; /*quito las listas(osea los puntos)*/
@@ -56,6 +79,7 @@
 .nav_links{
     color: #fff;
     text-decoration: none;
+    
 }
 
 .nav_menu{
@@ -87,18 +111,38 @@
 }
 .hero_title{
     font-size: 3rem;
+    text-shadow: 6px -1px 9px #000000;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #fff;
+    
+    border: none;
+    border-radius: 55px;
 }
 .hero_paragraph{
     margin-bottom: 20px;
+    margin: auto 200px;
+    border: #000;
+    background-color: #7ec4e2df;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border-radius: 15px;
+    color: #000000;
+    box-shadow: 4px 5px 86px 20px;
+    padding: 5px;
+    font-size: 30px;
+    text-shadow: 1px 2px 3px #fff
+    
+    
 }
 .cta{
     display: inline-block; /*??*/
-    background-color: #457fec;
+    background-color: #18a616;
     justify-self: center;
     color: #fff;
     text-decoration: none;
     padding: 13px 30px;
     border-radius: 30px;
+    box-shadow: 7px 6px 30px 10px;
+    margin-top: 30px;
 
 }
 
@@ -133,6 +177,7 @@
     color: var(--color-title);
     font-size: 2em;
     margin-bottom: 20px;
+   
 }
 
 .about_icons{
@@ -152,8 +197,13 @@
 }
 .about_paragraph{
     line-height: 1.5; /*separacion entre lineas*/
+    
 }
 
+.parrafo{
+    margin: auto 150px;
+    margin-bottom: 20px;
+}
 
       /* knowledge */
 .knowledge{
@@ -168,18 +218,28 @@ overflow: hidden;
     display: grid;
     /* ahora crea 2 columnas con el mismo tamaño equitativamente */
     grid-template-columns: 1fr 1fr;
-    gap: 1em;
+    gap: 10em;
     align-items: center;
+    
 }
 .knowledge_texts{
-    align-self: baseline;
+    margin-left: 45px;
+    text-align: center;
+    
 }
 .knowledge_picture{
    max-width: 500px;
+   width: 100%;
+   
+   justify-self: center;
+   
 }
 .knowledge_paragraph{
     line-height: 1.5;
+    
     margin-bottom: 30px;
+    background-color: #ffffff84;
+    border-radius: 10px;
 }
 .knowledge_img{
     
@@ -226,6 +286,12 @@ overflow: hidden;
     width: 370px;
     padding: 50px 40px;
 }
+
+#price-element-avanzado{
+
+    background-color: #f6b900;
+
+}
 .price_name{
     color: #fbfcffea;
     font-weight: 800;
@@ -245,15 +311,21 @@ overflow: hidden;
     color: #fff;
 }
 .price_cta{
-    background-color: #c6f609;
+    background-color: #f6f609;
     padding: 5px 30px;
     text-decoration: none;
     border-radius: 30px;
+   color: #4e3939;
    
     font-weight: 600;
     display: block;
     box-shadow: 0 0 9px rgba(0, 0, 0,.5);
     
+}
+
+#price_cta-avanzado{
+    background-color: #0084ff;
+    color: #fff;
 }
 
 /* Testimonios */
@@ -275,10 +347,10 @@ overflow: hidden;
 
 .testimony_body{
     display: grid;
-    grid-template-columns: 1fr max-content;
+    grid-template-columns:repeat(2,minmax(min-content,max-content));
     justify-content: space-between;
     align-items: center;/*contenido vertical (el texto en el centro verticalmente)*/
-    gap: 2em;
+    gap: 1em;
     /* ponmelo en la columna 2 a la 3 */
     grid-column: 2/3;
     /* ponmelo en la fila 1 a la 2 */
@@ -300,6 +372,7 @@ overflow: hidden;
     object-fit: cover;
     /* ahora centramos la imagen con 50% eje x y 30% eje y */
     object-position: 50% 70%;
+    box-shadow: -1px 1px 35px 5px;
 }
 .img_claudia{
     object-position: 26% 28%;
@@ -308,7 +381,8 @@ overflow: hidden;
 
 .testimony_texts{
     text-align: center;
-    max-width: 700px;
+    max-width: 900px;
+
 }
 /* span */
 .testimony_course{
@@ -316,6 +390,7 @@ overflow: hidden;
     color: #fff;
     display: inline-block;
     padding: 5px;
+    border-radius: 7px;
 }
 /* flecha izquiera y derecha */
 .testimony_arrow{
@@ -323,6 +398,13 @@ overflow: hidden;
     cursor: pointer;
 }
 
+.testimony_review{
+    background-color: #ffffffbe;
+    border-radius: 10px;
+    box-shadow: 4px 4px 2px rgba(0, 0, 0,.5);
+    text-align: center;
+    padding: 5px;
+}
 
 
            /* Questions */
@@ -341,7 +423,7 @@ overflow: hidden;
     padding: 0;
     transition: padding .2s;
     border: 1px solid #5454D4;
-    
+    margin: auto 100px;
     border-radius: 6px;
 }
 
@@ -392,6 +474,7 @@ overflow: hidden;
     text-align: left;
     height: 0;
     transition: height .5s;
+    line-height: 1.7;
 }
 
 /* Acceder */
@@ -416,12 +499,15 @@ overflow: hidden;
     justify-content: space-between;
     border-bottom: 4px solid #fff;
     align-items: center;
+    padding-left: 30px; 
+    padding-right: 30px; 
     
 
 }
 .nav--footer{
     display: grid;
     gap: 1em;
+    
 }
 
 .footer_title{
@@ -497,12 +583,18 @@ overflow: hidden;
     .nav_menu{
         display: block;
     }
+    .nav_menu .nav_img{
+        margin-right: 30px;
+        width: 50px;
+    }
+
+
     .nav_link--menu{
-        position: fixed;
-        background-color: #000;
+        position: absolute;
+        background-color: #080808ec;
         top: 0;
         left: 0;
-        height: 100%;
+        height: 95%;
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -512,6 +604,14 @@ overflow: hidden;
         opacity: 0;
         pointer-events: none;
         transition: .7s opacity;
+    }
+    .nav_items{
+        box-shadow: 1px 1px 40px #030ee897;
+        font-weight: 600;
+        font-size: 20px;
+
+
+        
     }
 
     /* crear clase modificadora para cuando el elemento close (x)
@@ -530,7 +630,15 @@ overflow: hidden;
     }
     .hero_title{
         font-size: 2.5rem;
+        margin: auto 20px;
+
     }
+
+    .hero_paragraph{
+        margin: auto 40px;
+    }
+
+
     .about_main{
         gap: 2em;
     }
@@ -551,6 +659,14 @@ overflow: hidden;
         width: 100%;
         justify-self: center;
     }
+    .knowledge_texts{
+        margin:  auto 30px;
+    }
+
+    .knowledge_texts .subtitle{
+
+        margin: auto 20px;
+    }
 
     .testimony_container{
         grid-template-columns: 30px 1fr 30px;
@@ -562,18 +678,46 @@ overflow: hidden;
         justify-items: center;
     }
 
+
+    /* botones de flechas */
+
+    .testimony_container .testimony_arrow{
+        background-color: #0084ff;
+        border-radius: 50%;
+        
+    }
+
+     #before{
+        margin-left: 20px;
+    }
+     #next{
+        margin-right: 80px;
+        
+    }
+
+    .questions_paragraph{
+        margin: auto 30px;
+    }
+
     .footer_container{
         flex-wrap: wrap;
     }
+    .footer_title{
+        justify-self: start;
+        
+    }
+
+
     .nav--footer{
-        margin-bottom: 20px;
+        margin-bottom: 30px;
         width: 100%;
         
-        text-align: center;
+        
     }
     .nav_link--footer{
         width: 100%;
         justify-content: space-evenly;
+        padding: 0px;
     }
     .footer_form{
         width: 100%;

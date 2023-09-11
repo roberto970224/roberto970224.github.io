@@ -39,23 +39,32 @@ CSS (Cascading Style Sheets) es un lenguaje de diseño web que controla la apari
 </head>
 <body>
         <!-- Inicio -->
-    <header class="hero">
+    <header class="hero" id="Inicio">
         <nav class="nav container">
             <div class="nav_logo">
-                <h2 class="nav_title">Curso CSS</h2>
+                <h2 class="nav_title">FRONTEND</h2>
             </div>
             <ul class="nav_link nav_link--menu">
                 <li class="nav_items">
-                    <a href="#" class="nav_links">Inicio</a>
+                    <a href="#Inicio" class="nav_links">Inicio</a>
                 </li>
                 <li class="nav_items">
-                    <a href="#" class="nav_links">Acerca de</a>
+                    <a href="#About" class="nav_links">Acerca de</a>
                 </li>
                 <li class="nav_items">
-                    <a href="#" class="nav_links">Contacto</a>
+                    <a href="#knowledge" class="nav_links">Conocimientos</a>
                 </li>
                 <li class="nav_items">
-                    <a href="#" class="nav_links">Blog</a>
+                    <a href="#Precio" class="nav_links">Precios</a>
+                </li>
+                <li class="nav_items">
+                    <a href="#testimony" class="nav_links">Testimonios</a>
+                </li>
+                <li class="nav_items">
+                    <a href="#Preguntas" class="nav_links">Preguntas</a>
+                </li>
+                <li class="nav_items">
+                    <a href="#Contactos" class="nav_links">Contactos</a>
                 </li>
                 <img src="images/close.svg" class="nav_close">
             </ul>
@@ -64,55 +73,55 @@ CSS (Cascading Style Sheets) es un lenguaje de diseño web que controla la apari
             </div>
         </nav>
         <section class="hero_container container">
-            <h1 class="hero_title">Aprende CCS desde Cero hasta dominarlo</h1>
-            <p class="hero_paragraph">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias, fugiat? Velit iure ducimus dolorem adipisci.</p>
+            <h1 class="hero_title">Lenguajes de Programación para ser un <br>Frontend-Developer</h1>
+            <p class="hero_paragraph">Aprender lenguajes de programación potencia habilidades digitales, fomenta la resolución de problemas, impulsa la innovación tecnológica y amplía oportunidades laborales..</p>
             <a href="#" class="cta">Comienza ahora</a>
         </section>
 
     </header>
     <main>
         <!-- Acerca de -->
-        <section class="container about">
-            <h2 class="subtitle">Que Aprenderas en este curso?</h2>
-            <p class="about_paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim aliquam odio necessitatibus possimus laudantium harum, dolore sit voluptas nesciunt illum!</p>
+        <section class="container about " id="About">
+            <h2 class="subtitle">Qué Aprenderas en este curso?</h2>
+            <p class="about_paragraph parrafo">En el curso de HTML, CSS y JavaScript, aprenderas a crear y dar formato a páginas web (HTML y CSS) y agregar interactividad y dinamismo (JavaScript). También comprenderías conceptos avanzados y mejores prácticas.</p>
             <div class="about_main">
                 <article class="about_icons">
                     <img src="images/customize.svg" class="about_icon">
-                    <h3 class="about_title">CSS Layouts</h3>
-                    <p class="about_paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium quod odit id hic sit totam!</p>
+                    <h3 class="about_title">HTML, CSS y JS</h3>
+                    <p class="about_paragraph"> HTML estructura, CSS da estilo y JavaScript brinda interactividad, mejorando experiencias digitales integrales.</p>
                 </article>
                 <article class="about_icons">
                     <img src="images/paint.svg" class="about_icon">
                     <h3 class="about_title">Animaciones</h3>
-                    <p class="about_paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium quod odit id hic sit totam!</p>
+                    <p class="about_paragraph">Las animaciones se crean mediante CSS, JavaScript o bibliotecas/frameworks como CSS3 o jQuery.</p>
                 </article>
                 <article class="about_icons">
                     <img src="images/code.svg" class="about_icon">
-                    <h3 class="about_title">Sass</h3>
-                    <p class="about_paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium quod odit id hic sit totam!</p>
+                    <h3 class="about_title">Etiquetas</h3>
+                    <p class="about_paragraph">Las etiquetas HTML son elementos clave que estructuran y dan formato al contenido web, permitiendo interacción, estilo y accesibilidad.</p>
                 </article>
             </div>
         </section>
         <!-- Knowledge -->
-        <section class="knowledge">
+        <section class="knowledge" id="knowledge">
             <div class="knowledge_container container">
                 <div class="knowledge_texts">
-                    <h2 class="subtitle">Curso comple de CSS3. Domina CSS de una vez por todas!</h2>
-                    <p class="knowledge_paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, eum. Iste itaque soluta quisquam, error magnam illo sequi quidem maxime et nam? Dolore consectetur dolorem eos rerum laborum explicabo non sunt, dicta ullam pariatur inventore neque consequuntur maxime quasi aut!</p>    
+                    <h2 class="subtitle">Que importancia tiene ser Frontend ?</h2>
+                    <p class="knowledge_paragraph">Ser Frontend es esencial para crear experiencias de usuario atractivas y funcionales en la web. Controlar la interfaz, el diseño y la interacción influye directamente en la satisfacción del usuario y el éxito en línea.</p>    
                     <a href="#" class="cta">Entra al curso</a>    
                 </div>
                 <figure class="knowledge_picture">
-                    <img src="images/timon.jpg" class="knowledge_img">
+                    <img src="images/frontend.jpg" class="knowledge_img">
                 </figure>
             </div>
         </section>
         <!-- PRECIO -->
-        <section class="price container">
-            <h2 class="subtitle">Obten el price perfecto para aprender</h2>
+        <section class="price container" id="Precio">
+            <h2 class="subtitle">Obten el precio perfecto para aprender</h2>
             
             <div class="price_table">
                 <div class="price_element">
-                    <p class="price_name">Flexbox</p>
+                    <p class="price_name">Basico</p>
                     <h3 class="price_price">Free</h3>
                     <div class="price_items">
                         <p class="price_features">Flexbox</p>
@@ -124,7 +133,7 @@ CSS (Cascading Style Sheets) es un lenguaje de diseño web que controla la apari
                 </div>
 
                 <div class="price_element price_element--best">
-                    <p class="price_name">Grid</p>
+                    <p class="price_name">Intermedio</p>
                     <h3 class="price_price">$30/mes</h3>
                     <div class="price_items">
                         <p class="price_features">Grid</p>
@@ -135,8 +144,8 @@ CSS (Cascading Style Sheets) es un lenguaje de diseño web que controla la apari
                     <a href="#" class="price_cta">Empieza Ahora</a>
                 </div>
 
-                <div class="price_element">
-                    <p class="price_name">Animaciones</p>
+                <div class="price_element " id="price-element-avanzado">
+                    <p class="price_name">Avanzado</p>
                     <h3 class="price_price">$40/mes</h3>
                     <div class="price_items">
                         <p class="price_features">Animation</p>
@@ -144,20 +153,21 @@ CSS (Cascading Style Sheets) es un lenguaje de diseño web que controla la apari
                         <p class="price_features">Render Website</p>
                     </div>  
 
-                    <a href="#" class="price_cta">Empieza Ahora</a>
+                    <a href="#" class="price_cta" id="price_cta-avanzado">Empieza Ahora</a>
                 </div>
             </div>
         </section>
         <!-- Testimonio -->
-        <section class="testimony">
+        <section class="testimony" id="testimony">
             <div class="testimony_container container">
                 <img src="images/leftarrow.svg" alt="" class="testimony_arrow" id="before">
                 <!-- 1ra seccion -->
                 <section class="testimony_body testimony_body--show" data-id="1">
                     <div class="testimony_texts">
                         <h2 class="subtitle"
-                        >Mi nombre es Andrey Beckham, <span class="testimony_course">Estudiante de CSS</span></h2>
-                        <p class="testimony_review">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia ratione quis dolore eius earum consequuntur.</p>
+                        >Mi nombre es Maria Elena <br><br> <span class="testimony_course">Profesora de CSS</span></h2>
+                        <p class="testimony_review">
+                            <em>En clases de CSS os impartiré conceptos y habilidades relacionadas con el diseño y la presentación de páginas web, incluyendo la aplicación de estilos, formatos, posicionamiento, selectores y responsive design.</em></p>
                     </div>
                     <figure class="testimony_picture">
                         <img src="images/andrey-k-65ZgGvh9RQc-unsplash.jpg" alt="" class="testimony_img">
@@ -167,8 +177,8 @@ CSS (Cascading Style Sheets) es un lenguaje de diseño web que controla la apari
                 <section class="testimony_body" data-id="2">
                     <div class="testimony_texts">
                         <h2 class="subtitle"
-                        >Mi nombre es Paula Perez <span class="testimony_course">Estudiante de HTML</span></h2>
-                        <p class="testimony_review">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde eos commodi tenetur quis esse dolore mollitia omnis, porro inventore dolorum.</p>
+                        >Mi nombre es Felipe Arias <br><br> <span class="testimony_course">Profesor de HTML</span></h2>
+                        <p class="testimony_review"><em>En clases de HTML impartiré conceptos y habilidades como la estructura de documentos web, etiquetas, formatos, enlaces, formularios y la creación de páginas básicas.</em></p>
                     </div>
                     <figure class="testimony_picture">
                         <img src="images/andrey-k-x-5LrunglNo-unsplash.jpg" alt="" class="testimony_img">
@@ -178,8 +188,9 @@ CSS (Cascading Style Sheets) es un lenguaje de diseño web que controla la apari
                <section class="testimony_body" data-id="3">
                     <div class="testimony_texts">
                         <h2 class="subtitle"
-                        >Mi nombre es Joshua Hakimi<span class="testimony_course">Estudiante de JavaScript</span></h2>
-                        <p class="testimony_review">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam cumque itaque nobis eius dolores est nostrum, perspiciatis id! Enim vel ipsam perspiciatis aspernatur nam deleniti iusto reprehenderit rem sit dignissimos.</p>
+                        >Mi nombre es Carlos <br><br> <span class="testimony_course">Profesor de JavaScript</span></h2>
+                        <p class="testimony_review">
+                            <em>En clases de JavaScript, os enseñaré conceptos y habilidades como la programación orientada a objetos, manipulación del DOM, eventos, control de flujo, funciones, y creación de interacciones dinámicas en sitios web.</em></p>
                     </div>
                     <figure class="testimony_picture">
                         <img src="images/joshua-coleman-WAdzNAu3Wyc-unsplash.jpg" alt="" class="testimony_img">
@@ -189,8 +200,9 @@ CSS (Cascading Style Sheets) es un lenguaje de diseño web que controla la apari
                  <section class="testimony_body" data-id="4">
                     <div class="testimony_texts">
                         <h2 class="subtitle"
-                        >Mi nombre es Claudia Samantha<span class="testimony_course">Estudiante de Python</span></h2>
-                        <p class="testimony_review">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam cumque itaque nobis eius dolores est nostrum, perspiciatis id! Enim vel ipsam perspiciatis aspernatur nam deleniti iusto reprehenderit rem sit dignissimos.</p>
+                        >Mi nombre es Claudia Samantha <br><br> <span class="testimony_course">Profesora de React </span></h2>
+                        <p class="testimony_review">
+                            <em>En clases de React, os enseñaré conceptos y habilidades para desarrollar aplicaciones web interactivas y de una sola página (SPA). Esto incluye componentes, enrutamiento, estado, efectos, consumo de API y gestión de eventos.</em></p>
                     </div>
                     <figure class="testimony_picture">
                         <img src="images/claudiaa.jpg" alt="" class="testimony_img img_claudia">
@@ -200,10 +212,9 @@ CSS (Cascading Style Sheets) es un lenguaje de diseño web que controla la apari
             </div>
         </section>
         <!-- Preguntas Frecuentes -->
-        <section class="questions container">
+        <section class="questions container" id="Preguntas">
             <h2 class="subtitle">Preguntas Frecuentes</h2>
-            <p class="questions_paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                           Molestiae ex architecto mollitia.</p>
+            <p class="questions_paragraph"><em>Es bueno que sepas las respuestas a estas preguntas antes de comenzar con el curso</em></p>
            
             <section class="questions_container">
                 <article class="questions_padding">
@@ -214,45 +225,36 @@ CSS (Cascading Style Sheets) es un lenguaje de diseño web que controla la apari
                         </span>
                        </h3>
                        
-                       <p class="questions_show">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio dolorem atque ab excepturi,
-                         ipsa quas vero quidem repudiandae? Est, exercitationem nesciunt unde consequuntur dolorem veritatis quas itaque eligendi
-                          enim quia voluptate sint blanditiis. Unde quia vitae esse corporis numquam quaerat. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio dolorem atque ab excepturi,
-                          ipsa quas vero quidem repudiandae?</p>
+                       <p class="questions_show"> Aprenderías a crear sitios web desde cero. HTML para estructurar el contenido, CSS para dar estilo y diseño, y JavaScript para agregar interactividad y funcionalidad dinámica a tus proyectos web. Además, comprenderías cómo estas tecnologías se integran para desarrollar experiencias web completas y receptivas, mejorando tu capacidad para construir sitios web profesionales y atractivos.</p>
                     </div>
                 </article>
                 <article class="questions_padding">
                     <div class="questions_answer">
-                       <h3 class="questions_title">Que es CSS?
+                       <h3 class="questions_title">Que tiempo demoraria en aprender?
                         <span class="questions_arrow">
                             <img src="images/up-arrow.svg" class="questions_img">
                         </span>
                        </h3>
                        
-                       <p class="questions_show">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio dolorem atque ab excepturi,
-                         ipsa quas vero quidem repudiandae? Est, exercitationem nesciunt unde consequuntur dolorem veritatis quas itaque eligendi
-                          enim quia voluptate sint blanditiis. Unde quia vitae esse corporis numquam quaerat. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio dolorem atque ab excepturi,
-                          ipsa quas vero quidem repudiandae?</p>
+                       <p class="questions_show">Varía según la dedicación y experiencia previa. Para una base sólida, se puede necesitar de 3 a 6 meses de estudio y práctica constante. Luego, el aprendizaje continuo es clave en este campo en constante evolución.</p>
                     </div>
                 </article>
                 <article class="questions_padding">
                     <div class="questions_answer">
-                       <h3 class="questions_title">Que es Python?
+                       <h3 class="questions_title">Que Herramientas a utilizar?
                         <span class="questions_arrow">
                             <img src="images/up-arrow.svg" class="questions_img">
                         </span>
                        </h3>
                        
-                       <p class="questions_show">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio dolorem atque ab excepturi,
-                         ipsa quas vero quidem repudiandae? Est, exercitationem nesciunt unde consequuntur dolorem veritatis quas itaque eligendi
-                          enim quia voluptate sint blanditiis. Unde quia vitae esse corporis numquam quaerat. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio dolorem atque ab excepturi,
-                          ipsa quas vero quidem repudiandae?</p>
+                       <p class="questions_show">Utilizaras editores de código como Visual Studio Code, Sublime Text, y herramientas de desarrollo web como Chrome DevTools para depurar y optimizar.</p>
                     </div>
                 </article>
             </section>
          <!-- acceder -->
             <section class="questions_offer">
                 <h2 class="subtitle">Estas listo para aprender CSS?</h2>
-                <p class="questions_copy">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores debitis ullam repellat. Asperiores laudantium quibusdam nulla facilis accusamus laborum? Eius amet nemo eveniet commodi, quae non eum. Voluptatum, ipsam itaque.</p>
+                <p class="questions_copy"></p>
                 <a href="#" class="cta">Entra ahora</a>
             </section>
 
@@ -262,7 +264,7 @@ CSS (Cascading Style Sheets) es un lenguaje de diseño web que controla la apari
     </main>
 
     <footer class="footer">
-        <section class="footer_container container">
+        <section class="footer_container container" id="Contactos">
             <nav class="nav nav--footer">
                 <h2 class="footer_title">Curso CSS</h2>
                 <ul class="nav_link nav_link--footer">
