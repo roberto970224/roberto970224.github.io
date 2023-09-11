@@ -271,15 +271,17 @@ overflow: hidden;
    gap: 2.5em;
    justify-content: space-evenly;
    align-items: center;
+   
 }
 
 .price_element{
-    line-height: 1.7;
+    line-height: 1.1;
     background-color: #77a4f6f1;
     padding: 40px;
-    border-radius: 10px;
+    border-radius: 40px;
     text-align: center;
     width: 300px;
+    box-shadow: 1px 1px 20px 1px;
 }
 .price_element--best{
     background-color: #e64d23f5;
@@ -670,6 +672,7 @@ overflow: hidden;
 
     .testimony_container{
         grid-template-columns: 30px 1fr 30px;
+
     }
     .testimony_body{
         grid-template-columns: 1fr;
@@ -684,14 +687,14 @@ overflow: hidden;
     .testimony_container .testimony_arrow{
         background-color: #0084ff;
         border-radius: 50%;
-        
+       
     }
 
      #before{
         margin-left: 20px;
     }
      #next{
-        margin-right: 80px;
+        margin-right: 20px;
         
     }
 
@@ -743,14 +746,28 @@ overflow: hidden;
     .hero_paragraph{
         font-size: 1rem;
     }
+    .about_paragraph{
+        margin: auto 80px;
+        text-align: center;
+    }
+
+    .about_icons .about_paragraph{
+        margin: auto 0;
+    }
+
+    .knowledge_texts .knowledge_paragraph{
+        margin-bottom: 0px;
+        margin-top: 10px;
+    }
     .subtitle{
         font-size: 1.8rem;
     }
     .price_element{
-        width: 90%;
+        width: 70%;
+        height: 350px;
     }
     .price_element--best{
-        width: 90%;
+        width: 70%;
         /* padding: 40px; */
     }
 
@@ -758,9 +775,37 @@ overflow: hidden;
         font-size: 2rem;
     }
     .testimony_container{
-        grid-template-columns: 28px 1fr 28px;
+        grid-template-columns: 1fr 280px 1fr;
+        gap: 1em;
+    }
+    .testimony_arrow{
+        
+       align-self: self-end;
         
     }
+    #before{
+
+    }
+    #next{
+        justify-self: end;
+    }
+    .questions_padding{
+        margin: auto 50px;
+    }
+
+    .questions_answer{
+        padding: 0;
+
+    }
+    /* footer */
+
+    .nav--footer .nav_link{
+        flex-flow: row;
+    }
+    .nav_link--footer .nav_items{
+        font-size: 16px;
+    }
+
     .footer_title{
         justify-self: start;
     }
