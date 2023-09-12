@@ -12,9 +12,10 @@ form {
     margin: 30px auto;
     padding: 20px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 15px;
     background-color: #f9f9f9;
     font-family: Arial, sans-serif;
+    box-shadow: 1px 1px 34px #fff;
     
     min-width: 300px;
     overflow-y: hidden; /* Evita el desplazamiento vertical */
