@@ -29,6 +29,13 @@
 
 
 
+    const registrar = document.querySelector(".footer_submit");
+
+    registrar.addEventListener("click",()=>{
+        let url = window.location.href
+        console.log(url)
+    })
+
 
 
 

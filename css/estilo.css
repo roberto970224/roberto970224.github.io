@@ -27,8 +27,7 @@
    position: relative;/*para q un elemento se posicione a este contenedor*/
    display: grid; /*xq quiero crear 2 filas*/
    grid-template-rows: 100px 1fr;/*1fr es q la 2da fila tome el contenido sobrante*/
-   background-image: url(../images/html\,css\ y\ js.jpg);
-   
+   background-image: url(../images/html\,css\ y\ js.jpg) ;
    background-size:cover ;
   
    clip-path: polygon(100% 0, 100% 80%, 50% 95%, 0 80%, 0 0);

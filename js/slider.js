@@ -1,6 +1,7 @@
 (function(){
 
     const sliders = [...document.querySelectorAll(".testimony_body")] 
+    console.log(sliders)
     const ButtonNext = document.getElementById("next")
     const ButtonBefore = document.getElementById("before")
     let value;
@@ -15,8 +16,11 @@
 
     const changePosition = (add)=>{
         const currentTestimony = document.querySelector('.testimony_body--show').dataset.id
+        
         value = parseInt(currentTestimony) 
+        
         value+=add;  
+        // console.log("el valor es "+ value)
         
         sliders[parseInt(currentTestimony)-1].classList.remove('testimony_body--show')
         // si 4 = 4 (data.id -> 3) || 0 = 0 (data.id->1)
